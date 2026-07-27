@@ -1,0 +1,15 @@
+{
+    "name": "citytech/module-allcategories",
+    "description": "Magento 2 All Categories Menu",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Citytech\\AllCategories\\": ""
+        }
+    }
+}
