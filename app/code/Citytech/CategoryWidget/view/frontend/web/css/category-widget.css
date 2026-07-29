@@ -1,0 +1,115 @@
+.citytech-category-widget {
+    margin: 40px 0;
+}
+
+.citytech-category-widget .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.citytech-category-widget .category-item {
+    position: relative;
+    min-height: 320px;
+    padding: 35px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.citytech-category-widget .category-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.citytech-category-widget .category-content {
+    width: 65%;
+    position: relative;
+    z-index: 2;
+}
+
+.citytech-category-widget .category-title {
+    margin: 0 0 15px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.citytech-category-widget .category-title a,
+.citytech-category-widget .category-title {
+    color: #24364b;
+    text-decoration: none;
+}
+
+.citytech-category-widget .category-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.citytech-category-widget .category-link {
+    text-decoration: none;
+}
+
+.citytech-category-widget .category-image {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    width: 250px;
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.citytech-category-widget .category-image img,
+.citytech-category-widget .category-image picture,
+.citytech-category-widget .category-image picture img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    .citytech-category-widget .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .citytech-category-widget .category-content{
+        width:60%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:767px){
+
+    .citytech-category-widget .category-item{
+        min-height:auto;
+        padding:25px;
+    }
+
+    .citytech-category-widget .category-content{
+        width:100%;
+    }
+
+    .citytech-category-widget .category-image{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        width:180px;
+        height:180px;
+        margin:25px auto 0;
+    }
+
+    .citytech-category-widget .category-title{
+        font-size:22px;
+    }
+
+}

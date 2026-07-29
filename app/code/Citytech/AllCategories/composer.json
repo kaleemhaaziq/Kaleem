@@ -1,7 +1,7 @@
 {
     "name": "citytech/module-allcategories",
     "description": "Magento 2 All Categories Menu",
-    "type": "magento2-module",
+    "type": "magento2-module yyy",
     "license": "proprietary",
     "version": "1.0.3",
     "autoload": {

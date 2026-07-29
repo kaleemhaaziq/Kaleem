@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+
+    <widget id="citytech_category_widget"
+            class="Citytech\CategoryWidget\Block\Widget\Categories">
+
+        <label>Citytech Categories</label>
+
+        <description>Display selected categories.</description>
+
+        <parameters>
+
+            <parameter name="category_ids"
+                       xsi:type="text"
+                       required="true"
+                       visible="true">
+                <label>Category IDs</label>
+            </parameter>
+
+            <parameter name="show_image"
+                       xsi:type="select"
+                       visible="true">
+
+                <label>Show Image</label>
+
+                <options>
+                    <option name="yes" value="1">
+                        <label>Yes</label>
+                    </option>
+
+                    <option name="no" value="0">
+                        <label>No</label>
+                    </option>
+
+                </options>
+
+            </parameter>
+
+            <parameter name="show_description"
+                       xsi:type="select"
+                       visible="true">
+
+                <label>Show Description</label>
+
+                <options>
+
+                    <option name="yes" value="1">
+                        <label>Yes</label>
+                    </option>
+
+                    <option name="no" value="0">
+                        <label>No</label>
+                    </option>
+
+                </options>
+
+            </parameter>
+
+        </parameters>
+
+    </widget>
+
+</widgets>

@@ -1,0 +1,77 @@
+<?php
+/**
+ * @var $block \Citytech\CategoryWidget\Block\Widget\Categories
+ */
+
+$categories = $block->getCategories();
+
+if (!count($categories)) {
+    return;
+}
+?>
+
+<div class="citytech-category-widget">
+    <div class="category-grid">
+
+        <?php foreach ($categories as $category): ?>
+			<div class="category-item">
+
+				<div class="category-content">
+
+					<a class="category-link" href="<?= $escaper->escapeUrl($category->getUrl()) ?>">
+						<h3 class="category-title">
+							<?= $escaper->escapeHtml($category->getName()) ?>
+						</h3>
+					</a>
+
+					<?php if ($block->canShowDescription()): ?>
+						<?php $shortDescription = (string) $category->getData('short_description'); ?>
+						<?php if ($shortDescription): ?>
+							<div class="category-short-description">
+								<?= $escaper->escapeHtml($shortDescription) ?>
+							</div>
+						<?php endif; ?>
+					<?php endif; ?>
+
+				</div>
+
+				<?php if ($block->canShowImage()): ?>
+
+					<?php
+					$thumbnail = $category->getData('ox_category_thumb');
+
+					if ($thumbnail) {
+						$thumbnail = $block->getUrl(
+							'',
+							['_direct' => ltrim(str_replace('/media/', 'media/', $thumbnail), '/')]
+						);
+					}
+					?>
+
+					<?php if ($thumbnail): ?>
+						<a class="category-link" href="<?= $escaper->escapeUrl($category->getUrl()) ?>">
+							<div class="category-image">
+								<img src="<?= $escaper->escapeUrl($thumbnail); ?>"
+									 alt="<?= $escaper->escapeHtmlAttr($category->getName()); ?>"
+									 loading="lazy" />
+							</div>
+						</a>
+					<?php endif; ?>
+
+				<?php endif; ?>
+
+			</div>		
+
+        <?php endforeach; ?>
+
+    </div>
+</div>
+<script>
+require(['jquery'], function ($) {
+    $(function () {
+        $('.citytech-category-widget b').each(function () {
+            $(this).replaceWith($(this).contents());
+        });
+    });
+});
+</script>
