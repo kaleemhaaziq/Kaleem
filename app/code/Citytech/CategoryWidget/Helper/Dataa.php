@@ -29,7 +29,7 @@ class Data extends AbstractHelper
      * Get Config Value
      *
      * @param string $path
-     * @param int|null $storeId
+     * @param int|null $storeId ........................................................................
      * @return mixed
      */
     public function getConfigValue(string $path, ?int $storeId = null)
