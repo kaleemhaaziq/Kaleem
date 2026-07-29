@@ -5,7 +5,7 @@ namespace Citytech\CategoryWidget\Helper;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\ScopeInterface;
 
-class Data extends AbstractHelper
+class Dataa extends AbstractHelper
 {
     /**
      * XML Config Path
