@@ -73,7 +73,7 @@ class Categories extends Template implements BlockInterface
 
 	/**
 	 * Show Image
-	 */
+	 ***/
 	public function canShowImage()
 	{
 		return (bool) ($this->getData('show_image') ?? 1);
