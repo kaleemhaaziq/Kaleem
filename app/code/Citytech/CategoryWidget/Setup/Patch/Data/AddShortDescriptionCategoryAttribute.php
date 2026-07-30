@@ -54,7 +54,6 @@ class AddShortDescriptionCategoryAttribute implements DataPatchInterface
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
-
     public static function getDependencies()
     {
         return [];
